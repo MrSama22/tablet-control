@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnMute = document.getElementById('btnMute');
     const btnSpotify = document.getElementById('btnSpotify');
     const btnClock = document.getElementById('btnClock');
+    const btnPomodoro = document.getElementById('btnPomodoro');
     const btnTurnOn = document.getElementById('btnTurnOn');
     const btnTurnOff = document.getElementById('btnTurnOff');
     const toast = document.getElementById('toast');
@@ -86,6 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
             showToast('⏰ Comando lanzado: Abrir Reloj');
             btnClock.style.transform = 'scale(0.95)';
             setTimeout(() => btnClock.style.transform = '', 100);
+        }
+    });
+
+    btnPomodoro.addEventListener('click', async () => {
+        const success = await sendWebhook('open_pomodoro');
+        if (success) {
+            showToast('🍅 Comando lanzado: Iniciar Pomodoro');
+            btnPomodoro.style.transform = 'scale(0.95)';
+            setTimeout(() => btnPomodoro.style.transform = '', 100);
         }
     });
 

@@ -10,6 +10,9 @@
     --warning-hover: #f39c12;
     --dark-btn-color: #2c3e50;
     --dark-btn-hover: #1a252f;
+    --pomodoro-color: #ff4757;
+    /* Rojo tomate vivo */
+    --pomodoro-hover: #ff6b81;
     --danger-color: #cf6679;
     --danger-hover: #ff7597;
     --text-primary: #ffffff;
@@ -201,6 +204,19 @@ header p {
 .btn-warning:hover,
 .btn-warning:active {
     background-color: var(--warning-hover);
+}
+
+.btn-pomodoro {
+    background-color: var(--pomodoro-color);
+    border-color: var(--pomodoro-color);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+}
+
+.btn-pomodoro:hover,
+.btn-pomodoro:active {
+    background-color: var(--pomodoro-hover);
 }
 
 .btn-dark {
